@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1,h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    vertical-align: middle;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(./../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width:1500px ;
+}
+.main__heading{
+    font-size: 50px;
+    text-transform:capitalize;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.choosing__list{
+    margin-left: 60px;
+    width: 1400px;
+}
+
+.choosing__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choosing__inner-box{
+    display: flex;
+    align-items: center;
+}
+
+.choosing__item + .choosing__item{
+    margin-top: 20px;
+}
+
+.choosing__input{
+    display: none;
+}
+
+
+.choosing__label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    margin-right: 40px;
+    border: 3px solid black;
+    background-color: rgb(244, 251, 249);
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.choosing__label:hover{
+    box-shadow: inset 0 0 0 1.5px black;
+    background-color:paleturquoise;
+}
+.car__img{
+    width: 140px;
+    height: 140px;
+}
+
+.motorbike__img{
+    width: 130px;
+    height: 130px;
+}
+
+.cycling__img{
+    width: 120px;
+    height: 120px;
+}
+
+.choosing__destination{
+    width: 140px;
+    height: 140px;
+}
+
+.choosing__submit{
+    min-width: 150px;
+    height: 60px;
+    font-size: 32px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(128, 0, 0); 
+    background-color: aqua;
+    transition: all ease 1s;
+}
+
+.choosing__submit:hover{
+    transform: rotate(360deg);
+}
+
+.choosing__submit:active{
+    transform: scale(1.1);
+}  
+
+.choosing__input:checked + .choosing__label{
+    background-color: green;
+    color: white;
+    border: 6px solid rgb(139, 23, 0);
+    box-shadow: 0 0 10px 5px black;
+}
+
+.choosing__input:checked ~ .driving{
+    animation: transport 5s linear ;
+}
+
+/* .choosing__input:checked ~ .driving:hover{
+    animation-play-state: paused;
+} */
+
+@keyframes transport{
+    0% {transform: translate(0)  skew(0);
+    }
+    
+    10%{
+        transform: translateX(93px) skew(-20deg);
+    }
+    
+    50%{
+        transform: translateX(462px)  skew(-20deg);
+    }
+    
+    70%{
+        transform: translateX(647px) skew(-20deg);
+    }
+    
+    100%{
+        transform: translate(925px)  skew(0);
+    }
+}
